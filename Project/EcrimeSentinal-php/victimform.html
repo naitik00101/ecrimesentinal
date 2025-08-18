@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complaint-cyberCrime form</title>
+</head>
+<body>
+      <form action="register.php" method="POST">
+        
+        <label for="name">Full Name:</label>
+        <input type="text" id="name" name="name" placeholder="Full Name" required>
+
+        <label for="email">Email Address:</label>
+        <input type="email" id="email" name="email" placeholder="Email Address" required>
+
+          <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone" placeholder="10-digit phone number" pattern="[0-9]{10}" required>
+
+        <label for="phone">Phone Number:</label>
+        <select >
+            <option value="Select relation "></option>
+            <option value="Father">Father</option>
+            <option value="Mother">Mother</option>
+            <option value="Brother">Brother</option>
+            <option value="Sister">Sister</option>
+            <option value="Spouse">Spouse</option>
+            <option value="Self">Self</option>
+        </select>
+
+        <label for="complaint">Complaint :</label>
+        <textarea type="text" id="complaint" name="complaint" placeholder=" Write Complaint details here" required>
+
+        <label for="cdate">Complaint Date</label>
+        <input type="date" id="cdate" name="cdate" required>
+
+        <label for="idate">Incident Date</label>
+        <input type="date" id="idate" name="idate" required>
+
+      
+
+        <button type="submit" >Register</button>
+    </form>
+</body>
+</html>
