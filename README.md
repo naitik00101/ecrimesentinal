@@ -7,7 +7,7 @@ Clone the Repository:
 git clone https://github.com/naitik00101/ecrimesential.git
 
 Pull Latest Changes:
-git pull origin test
+git pull origin main
 
 Create Your Own Branch (Optional):
 git checkout -b your-branch-name
@@ -17,7 +17,7 @@ git add .
 git commit -m "Your message here"
 
 Push Changes to test Branch:
-git push origin test
+git push origin testing
 
 ## ✅ Workflow
 1. Pull the latest code from test
