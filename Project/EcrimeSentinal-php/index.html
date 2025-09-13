@@ -4,14 +4,18 @@
     <meta charset="UTF-8" />
     <title>E-Crime Sentinel - Home</title>
     <link rel="stylesheet" href="style.css" />
+    <script src="https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+<script src="/lenis-init.js"></script>
+
 </head>
+
 <body>
 
 <header>
     <h1><a href="index.html" class="site-title">E-Crime Sentinel</a></h1>
     <nav>
         <a href="index.html" class="active">Home</a>
-        <a href="login.html">Login</a>
+        <a href="login.php">Login</a>
         <a href="register.html">Register</a>
     </nav>
 </header>
@@ -59,6 +63,19 @@
 <footer>
     <p>&copy; 2025 E-Crime Sentinel. All rights reserved.</p>
 </footer>
+<script>
+      document.querySelectorAll('.info-box').forEach(box => {
+        box.onmousemove = function(e) {
+          const rect = box.getBoundingClientRect();
+          const x = e.clientX - rect.left;
+          const y = e.clientY - rect.top;
 
+          box.style.setProperty('--x', `${x}px`);
+          box.style.setProperty('--y', `${y}px`);
+        }
+      });
+    </script>
+</body>
+</html>
 </body>
 </html>

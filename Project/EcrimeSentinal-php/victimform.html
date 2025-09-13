@@ -1,25 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Complaint-cyberCrime form</title>
+    <title>Complaint - CyberCrime Form</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+<script src="/lenis-init.js"></script>
+
+      
+    <style>
+        select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            background: #2b2b2b;
+            border: 1px solid #555;
+            border-radius: 5px;
+            color: #fff;
+            font-size: 14px;
+            cursor: pointer;
+            appearance: none;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path fill='%23ffffff' d='M7 10l5 5 5-5z'/></svg>");
+            background-repeat: no-repeat;
+            background-position: right 12px center;
+            background-size: 16px;
+            padding-right: 40px;
+        }
+
+        select:focus {
+            outline: none;
+            border-color: #00ffff;
+            box-shadow: 0 0 8px rgba(0, 255, 255, 0.5);
+        }
+
+        select:hover {
+            background-color: #333333;
+        }
+
+        #complaint {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            background: #2b2b2b;
+            border: 1px solid #555;
+            border-radius: 5px;
+            color: #fff;
+            font-size: 14px;
+            min-height: 110px;
+            resize: vertical;
+        }
+
+        #complaint:focus {
+            outline: none;
+            border-color: #00ffff;
+            box-shadow: 0 0 8px rgba(0, 255, 255, 0.5);
+        }
+
+        #complaint::placeholder {
+            color: #aaaaaa;
+            font-style: italic;
+        }
+    </style>
 </head>
+
 <body>
-      <form action="register.php" method="POST">
-        
+    <form method="POST" class="form-container">
+
+        <h2>Cyber Crime Complaint Form</h2>
+
         <label for="name">Full Name:</label>
         <input type="text" id="name" name="name" placeholder="Full Name" required>
 
         <label for="email">Email Address:</label>
         <input type="email" id="email" name="email" placeholder="Email Address" required>
 
-          <label for="phone">Phone Number:</label>
+        <label for="phone">Phone Number:</label>
         <input type="tel" id="phone" name="phone" placeholder="10-digit phone number" pattern="[0-9]{10}" required>
 
-        <label for="phone">Phone Number:</label>
-        <select >
-            <option value="Select relation "></option>
+        <label for="relation">Relationship With Victim:</label>
+        <select id="relation" name="relation" required>
+            <option value="">-- Select Relation --</option>
             <option value="Father">Father</option>
             <option value="Mother">Mother</option>
             <option value="Brother">Brother</option>
@@ -28,18 +92,25 @@
             <option value="Self">Self</option>
         </select>
 
-        <label for="complaint">Complaint :</label>
-        <textarea type="text" id="complaint" name="complaint" placeholder=" Write Complaint details here" required>
+        <label for="complaint">Complaint:</label>
+        <textarea id="complaint" name="complaint" placeholder="Write complaint details here" required></textarea>
 
-        <label for="cdate">Complaint Date</label>
+        <label for="cdate">Complaint Date:</label>
         <input type="date" id="cdate" name="cdate" required>
 
-        <label for="idate">Incident Date</label>
+        <label for="idate">Incident Date:</label>
         <input type="date" id="idate" name="idate" required>
 
-      
+        <label for="complaintType">Type of Complaint:</label>
+        <select id="complaintType" name="complaintType" required>
+            <option value="">-- Select Complaint Type --</option>
+            <option value="hacking">Hacking</option>
+            <option value="financialFraud">Online Financial Fraud</option>
+            <option value="socialMediaHarassment">Social Media Harassment</option>
+        </select>
 
-        <button type="submit" >Register</button>
+        <button type="submit">Register</button>
     </form>
 </body>
+
 </html>
